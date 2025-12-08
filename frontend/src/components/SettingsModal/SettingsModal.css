@@ -1,0 +1,203 @@
+.settings-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.settings-modal {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+  width: 100%;
+  max-width: 750px;
+  overflow: hidden;
+  animation: slideUp 0.3s ease-out;
+}
+
+.settings-header {
+  background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+  border-bottom: 1px solid #333;
+  color: white;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.settings-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.btn-close-settings {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: normal;
+  justify-content: center;
+  transition: all 0.2s ease;
+  line-height: 1;
+  padding: 0;
+}
+
+.btn-close-settings:hover {
+  background: #ff6b6b;
+}
+
+.settings-content {
+  padding: 2rem;
+  color: #ccc;
+}
+
+/* Card de Conta */
+.account-card {
+  background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.account-icon {
+  color: white;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.account-info {
+  flex: 1;
+}
+
+.account-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.875rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.account-info .username {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.account-type {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #749ee1;
+  font-weight: 500;
+}
+
+/* Botão de Logout */
+.btn-logout {
+  width: 100%;
+  padding: 0.875rem;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-logout:hover {
+  box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
+}
+
+/* Informações do Sistema */
+.system-info {
+  border-top: 1px solid #333;
+  padding-top: 1.5rem;
+}
+
+.system-info h4 {
+  margin: 0 0 1rem 0;
+  font-size: 0.875rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  color: #999;
+  font-size: 0.95rem;
+}
+
+.info-value {
+  color: #ccc;
+  font-weight: 500;
+  font-size: 0.95rem;
+  font-family: monospace;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .settings-modal {
+    margin: 1rem;
+    max-width: calc(100% - 2rem);
+  }
+
+  .settings-header {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .settings-content {
+    padding: 1.5rem;
+  }
+
+  .account-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .account-info h3 {
+    margin-top: 0.5rem;
+  }
+}

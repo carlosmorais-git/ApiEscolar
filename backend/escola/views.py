@@ -55,14 +55,10 @@ class MatriculaViewSet(viewsets.ModelViewSet):
 
     Métodos HTTP Permitidos:
     - GET, POST
-
-    Throttle Classes:
-    - MatriculaAnonRateThrottle: limite de taxa para usuários anônimos.
-    - UserRateThrottle: limite de taxa para usuários autenticados.
     """
     queryset = Matricula.objects.all()
     serializer_class = MatriculaSerializer
-    throttle_classes = [UserRateThrottle,MatriculaAnonRateThrottle]
+    # throttle_classes = [UserRateThrottle,MatriculaAnonRateThrottle]  # Desabilitado para desenvolvimento
     http_method_names = ["get", "post"]
 
 class ListaMatriculaEstudante(generics.ListAPIView):
